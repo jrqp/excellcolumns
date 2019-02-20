@@ -13,40 +13,40 @@ import java.util.ArrayList;
 public class Excellcolumns {
 
 public static void main(String[] args) {    
-        String[] columnNames = generateExcelColumnNames(350);
+        String[] columnombres = generateExcelColumnNames(350);
         
-        for (String columnName : columnNames)
+        for (String columnnombres : columnombres)
         {
-            System.out.print(columnName + " ");
+            System.out.print(columnnombres + " ");
         }
     }
     
-    public static String[] generateExcelColumnNames(int columnCount)
+    public static String[] generateExcelColumnNames(int conteocolumna)
     {
-        String[] columns = new String[columnCount];
+        String[] columna = new String[conteocolumna];
         int caracter = 65;
         int posicion=0;
-        columns[0]="";
+        columna[0]="";
         int indicador=0;
-        if(columnCount<1)
+        if(conteocolumna<1)
         {
-            columns[0]="Cantidad debe de ser mayor a 1";
-            return columns;
+            columna[0]="Cantidad debe de ser mayor a 1";
+            return columna;
         }        
-        if(columnCount>10000)
+        if(conteocolumna>10000)
         {
-            columns[0]="Cantidad debe de ser menor a 10000";
-            return columns;
+            columna[0]="Cantidad debe de ser menor a 10000";
+            return columna;
         }
-        for (int i=0;i<columnCount;i++)
+        for (int i=0;i<conteocolumna;i++)
         {
             if(indicador==0)
             {
-                columns[i]=""+Character.toString((char)caracter);
+                columna[i]=""+Character.toString((char)caracter);
             }
             if(indicador!=0)
             {
-                columns[i]=columns[posicion]+Character.toString((char)caracter);
+                columna[i]=columna[posicion]+Character.toString((char)caracter);
             }
             if(caracter == 90)
             {
@@ -65,7 +65,7 @@ public static void main(String[] args) {
         }
         
         
-        return columns;
+        return columna;
     }
     
 }
